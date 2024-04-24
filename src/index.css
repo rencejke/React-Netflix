@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer
+{
+    h1,h2,h3,h4,h5,h6
+    {
+        @apply font-bold
+    }
+    p
+    {
+        @apply mb-4
+    }
+    img
+    {
+        @apply block
+    }
+    .container-t
+    {
+        @apply max-w-[1200px] mx-auto
+    }
+}
+@layer components
+{
+    .btn
+    {
+        @apply  inline-block h-[42px] px-3 py-2 bg-transparent border text-white border-white rounded-md
+    }
+
+    .btn-accent
+    {
+        @apply bg-accent border-accent
+    }
+    .input__wrapper
+    {
+        @apply relative mb-5
+    }
+
+    .input__wrapper input
+    {
+        @apply w-full px-4 pb-2 pt-6 rounded-md bg-white/5 border border-white outline-none text-white
+    }
+    .input__wrapper label
+    {
+        @apply absolute top-4 left-5 text-white transition-all pointer-events-none
+    }
+
+    .input__wrapper input:focus + label, 
+    .input__wrapper input:valid + label
+    {
+        @apply text-sm top-2 left-4
+    }
+}
+
+.feature-list .features:nth-child(even) .content
+{
+    @apply order-1
+}
+.answer p 
+{
+    @apply text-xl mb-5 font-bold
+}
