@@ -62,3 +62,55 @@
 {
     @apply text-xl mb-5 font-bold
 }
+.slick-dots {
+    @apply absolute top-[-50px] text-right pointer-events-none
+}
+
+.slick-dots li button:before {
+    @apply content-[''] w-[22px] h-[3px] bg-zinc-800 mx-1 pointer-events-auto
+      
+}
+.slick-next, .slick-prev
+{
+ @apply h-full opacity-0 hover:opacity-100 z-[20]
+}
+
+.slick-arrow
+{
+    @apply transition-all bg-black/20
+}
+
+.slick-next, .slick-prev{
+            @apply h-full opacity-50 hover:opacity-100 flex flex-col justify-center items-center mt-[-2px];
+            svg{
+                @apply h-fit 
+                text-white text-4xl brightness-200 opacity-0 hover:opacity-100
+            }
+        }
+        .slick-next::before, .slick-prev::before{
+            @apply hidden;
+        }
+        .movie__info::before {
+            @apply content-[''] absolute bottom-full left-0 h-[100px] w-full  block  bg-gradient-to-t from-[rgba(20,20,20,.95)] from-10% via-[rgba(20,20,20,.4)] via-60% to-transparent
+        }
+
+
+/* width */
+.custom-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  /* Handle */
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #0b0b0b;
+  }
+  
+  /* Handle on hover */
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #070707;
+  }        
